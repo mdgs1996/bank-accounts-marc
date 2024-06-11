@@ -10,7 +10,13 @@
 
 export function getAverage(array) {
   // Your code goes here...
+  let sum = 0;
+  
+  for (const num of array) { // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
+    sum += num;
+  } 
 
+  return  (sum / array.length)
 }
 
 
@@ -23,7 +29,19 @@ export function getAverage(array) {
 
 export function getStringSum(str) {
   // Your code goes here...
+  let alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J" ,"K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+  let strArr = str.split("");
+  console.log(`String Array: ${strArr}`);
+  
+  let sum = 0;
+  for (const chr of strArr) {
+    console.log(`Character: ${chr.toUpperCase()}`);
+    if (!alphabet.includes(chr.toUpperCase())) {
+      sum += Number(chr); // https://www.geeksforgeeks.org/convert-a-string-to-an-integer-in-javascript/
+    }
+  }
 
+  return sum;
 }
 
 

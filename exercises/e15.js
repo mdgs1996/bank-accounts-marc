@@ -6,7 +6,22 @@
 
 export function concatArrays(arr1, arr2) {
   // Your code goes here...
+  let result = [];
 
+  console.log(`Array 1: ${result}`)
+  console.log(`Array 2: ${arr2}`)
+
+  arr1.forEach(element => {
+    result.push(element);
+    });
+
+  arr2.forEach(element => {
+    result.push(element);
+    });
+  
+  console.log(`Array (Concatenated): ${result}`)
+
+  return result;
 }
 
 

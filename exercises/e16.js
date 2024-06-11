@@ -7,7 +7,19 @@
 
 export function flatArrays(array) {
   // Your code goes here...
+  let result = [];
+  array.forEach(element => {
+    if (element.length >= 2) {
+      console.log(element);
+      element.forEach(subElement => {
+      result.push(subElement);
+      })
+    } else {
+      result.push(element);
+    }
+  });
 
+  return result;
 }
 
 

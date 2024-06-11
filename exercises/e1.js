@@ -5,7 +5,16 @@
 
 export function getFirstTenNumbers() {
   // Your code goes here...
+  const arr = []
+  
+  var num = 1;
+  while (num <= 10) {
+    arr.push(num);
+    
+    num+=1;
+  }
 
+  return arr;
 }
 
 // === TEST YOURSELF ===

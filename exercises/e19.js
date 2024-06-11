@@ -6,7 +6,15 @@
 
 export function reverseArray(array) {
   // Your code goes here...
+  let result = []
+  let index = array.length - 1;
 
+  while (index >= 0) {
+    result.push(array[index]);
+    index--;
+  }
+
+  return result;
 }
 
 

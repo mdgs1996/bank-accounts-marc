@@ -6,7 +6,21 @@
 
 export function getAllWithdrawals(array) {
   // Your code goes here...
+  let result = [];
 
+  for (const account of array) {
+    if (typeof account.withdrawals !== "undefined") { // https://stackoverflow.com/questions/3390396/how-can-i-check-for-undefined-in-javascript
+      let sum = 0;
+      for (const withdrawal of account.withdrawals) {
+        sum += withdrawal;
+      }
+      result.push(sum);
+    } else {
+      result.push(0);
+    }
+  }
+
+  return result;
 }
 
 // === TEST YOURSELF ===

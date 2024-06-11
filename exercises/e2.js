@@ -4,7 +4,20 @@
 
 export function getNumbersWithSquareRoots(max) {
   // Your code goes here...
+  let arr = [];
+  const primes = [0, 1, 2, 3, 5, 7];
 
+  let num = 0;
+  while (num <= max) {
+    let sqrt = Math.sqrt(num);
+    if (sqrt % 2 in primes) {
+      arr.push(num);
+    }
+
+    num++;
+  }
+  
+  return arr;
 }
 
 // === TEST YOURSELF ===

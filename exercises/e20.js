@@ -7,7 +7,29 @@
 
 export function separateNamesWithAFromRest(array) {
   // Your code goes here...
+  let result = [];
+  let arr1_containsA = [];
+  let arr2_containsNotA = [];
 
+for (const name of array) {
+  let nameContainsA = false;
+
+  for (const chr of name) {
+    if (chr.toLowerCase() == 'a') {
+      nameContainsA = true;
+    }
+  }
+  
+  if (nameContainsA) {
+    arr1_containsA.push(name);
+  } else {
+    arr2_containsNotA.push(name);
+  }
+}
+
+  result.push(arr1_containsA, arr2_containsNotA);
+
+  return result;
 }
 
 
